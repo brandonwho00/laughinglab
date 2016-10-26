@@ -1,0 +1,83 @@
+/* Normalize & Reset */
+
+
+
+button,
+input,
+textarea {
+    color: inherit; /* 1 */
+    font: inherit; /* 2 */
+    margin: 0; /* 3 */
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Form Styles */
+
+.container { 
+  width: 50%;
+ }
+.ajax-form { width: 100%; }
+.ajax-form input, 
+.ajax-form textarea {
+    color: #660000;
+  	padding: 20px;
+  	border: 3px solid #ccc;
+  	border-radius: 6px;
+  	margin: 0 0 27px;
+    background: rgba(255,255,255,.75);
+    outline: none;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out; 
+}
+
+.ajax-form input:focus, 
+.ajax-form textarea:focus {
+  	border: 3px solid #660000;
+    color: #660000;
+}
+
+.ajax-form input[type="submit"] {
+  background-color: rgba(255,255,255,.5);
+    border: 3px solid #ccc;
+	color: rgba(0,153,204,.5);
+}
+
+.ajax-form input[type="submit"]:hover {
+  	background-color: rgba(0,153,204,.5);
+    border: 3px solid rgba(0,153,204,.5);
+    color: rgba(255,255,255,.5);
+}
+
+.name, .email { width: 48%; }
+
+.name { float: left; }
+.email { float: right }
+
+.message { width: 100%; }
+
+.form-btn { text-align: center; }
+
+.error { border: 3px solid #ED1941 !important; }
+ 
+.form-thank-you {
+  	display: none;
+  	width: 100%;
+  	text-align: center;
+}
+
+.form-thank-you h3 { padding-top: 15px; }
+
+@media (max-width: 767px) {
+  .name, .email { 
+  	width: 100%; 
+  	float: none;
+  }
+
+}

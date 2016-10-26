@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<title>The Laughing Labrador</title>
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
 	<!-- NavBar -->
@@ -28,6 +29,9 @@
     }
     window.onload = init();
 </script>
+
+<!-- contact form -->
+<link rel="stylesheet" href="css/contact.css">
 
 
 </head>
@@ -60,7 +64,7 @@
 	<h1>The Coffee Shop</h1>
 	<!-- Have these line up with font awesome -->
 	<div class="fourcolumns">
-	<div class="newspaper">
+	<div class="about-style">
 	<div>
 		<h2>A place to meet</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -112,15 +116,19 @@
 <!-- Contact info here -->
 
 <section id="contact">
-	<h1>Contact us</h1>
-	<div>
-		<h3>Details</h3>
-		<p>Please contact us!</p>
-		<p>555 Boulder Ave.</p>
-		<p>Boulder, CO</p>
-		<p>303-555-5555</p>
+<h1>Contact us</h1>
+<div class="twocolumns">
+	<div class="left details">
+		<h3>Contact Details</h3>
+		<p>Please feel free to contact us with your questions or concerns about dogs or coffee!</p>
+		<div id="more">
+		<i></i><p>555 Boulder Ave.</p>
+		<i></i><p>Boulder, CO</p>
+		<i></i><p>303-555-5555</p>
+		<i></i><p>info@laughinglab.com</p>
+		</div>
 	</div>
-		<div class="container">
+		<div class="container right">
 		    <form action="php/form-submit.php" class="ajax-form" method="post">
 		        <input type="text" class="name" name="name" placeholder="Your name">
 		        <input type="text" class="email" name="email" placeholder="Your email address">
@@ -129,23 +137,85 @@
 		            <input type="submit" class="submit" value="Submit">
 		        </div>
 		    </form>
-			     <div class="form-thank-you">
-			         <!-- <h3>Thank you for contacting me!</h3> -->
-			         <p>I'll be in touch with you shortly</p>
-			     </div>  
 		</div>
+</div>
+</div>
 </section>
 
 
-</main>
+<!-- Put map here, maybe? -->
+<div id="map"></div>
 
-<footer>
-	<small>Website created by Brandon Miller</small>
+
+
+
+<footer id="foot">
+	<small><p>Website created by Brandon Miller</p></small>
 </footer>
+</main>
+	<!-- Google Map -->
+	 
+        
+        
+           <!--  You need to include this script tag on any page that has a Google Map.
+
+            The following script tag will work when opening this example locally on your computer.
+            But if you use this on a localhost server or a live website you will need to include an API key. 
+            Sign up for one here (it's free for small usage): 
+                https://developers.google.com/maps/documentation/javascript/tutorial#api_key
+
+            After you sign up, use the following script tag with YOUR_GOOGLE_API_KEY replaced with your actual key. -->
+                <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOYBQtdHvwuLfn5fTgx4IajTtpaJiDaA4&sensor=false"></script>
+       
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+
+            
+            
+            function init() {
+                // Basic options for a simple Google Map
+
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 16,
+                    zoomControl: false,
+                    scaleControl: false,
+                    scrollwheel: false,
+                    disableDoubleClickZoom: true,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.01836, -105.27753), // New York
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"all","elementType":"geometry","stylers":[{"hue":"#ff4400"},{"saturation":-68},{"lightness":-4},{"gamma":0.72}]},{"featureType":"landscape.man_made","elementType":"geometry","stylers":[{"hue":"#0077ff"},{"gamma":3.1}]},{"featureType":"poi.park","elementType":"all","stylers":[{"hue":"#44ff00"},{"saturation":-23}]},{"featureType":"transit","elementType":"labels.text.stroke","stylers":[{"saturation":-64},{"hue":"#ff9100"},{"lightness":16},{"gamma":0.47},{"weight":2.7}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"lightness":-48},{"hue":"#ff5e00"},{"gamma":1.2},{"saturation":-23}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#00ccff"},{"gamma":0.44},{"saturation":-33}]},{"featureType":"water","elementType":"labels.text.fill","stylers":[{"hue":"#007fff"},{"gamma":0.77},{"saturation":65},{"lightness":99}]},{"featureType":"water","elementType":"labels.text.stroke","stylers":[{"gamma":0.11},{"weight":5.6},{"saturation":99},{"hue":"#0091ff"},{"lightness":-86}]}] };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(40.01836, -105.27753),
+                    map: map,
+                    title: 'Pizza Colóre'
+               
+                });
+
+            }
+        </script>
 
 
 	<script src="js/fastclick.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/fixed-responsive-nav.js"></script>
 </body>
+
 </html>
