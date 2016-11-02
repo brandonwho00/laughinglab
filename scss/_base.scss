@@ -39,6 +39,10 @@ body {
 	}
 }
 
+.bg {
+	background-image: url('../img/design-bg.jpg');
+}
+
 /* ------------------------------------------
   INTRO STYLES
 --------------------------------------------- */
@@ -67,7 +71,8 @@ body {
 
 #about {
 	height:550px;
-	background-color: #ebcdb0;
+	// background-color: #ebcdb0;
+	// background-image: url(../img/design-bg.jpg);
 }
 
 #about i {
@@ -126,8 +131,7 @@ body {
 
 #menu {
 	height:650px;
-	background-color: #ebcdb0;
-
+	// background-color: #ebcdb0;
 }
 
 @media only screen and (max-width: 660px) and (min-width: 200px) {
@@ -143,11 +147,10 @@ body {
 
 #beans {
 	height: 650px;
-	background-image: url(../img/coffee-beans1.png);
+	background-image: url(../img/coffee-beans1.jpg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+
   	h1 {
 	position: absolute;
 	}
@@ -161,8 +164,9 @@ body {
 #contact {
 	height: 700px;
 	background-color: #ebcdb0;
+	background-image: url('../img/brown-bg.jpg');
 	-webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
+  	box-shadow: 0 0 50px rgba(0,0,0,0.8);
 }
 
 .twocolumns {
@@ -178,11 +182,10 @@ body {
 	h3 {
 		font-size: 25px;
 		padding-bottom: 10px;
-		padding-right: 30px;
 	}
 	p {
 	font-size: 15px;
-	width: 400px;
+	width: 300px;
 	text-align: left;
 	}
 }
@@ -212,6 +215,11 @@ body {
 		margin: auto;
 		padding: 0px;
 }
+#more {
+	padding-bottom: 20px;
+	p {
+	width: 200px;
+}}
 }
 
 /* ------------------------------------------
@@ -225,8 +233,6 @@ body {
   max-width: 1920px;
   position: relative;
   background-color: grey;
- -webkit-box-shadow: 0 0 50px rgba(0,0,0,0.8);
-  box-shadow: 0 0 50px rgba(0,0,0,0.8);
 }
 
 

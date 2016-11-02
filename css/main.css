@@ -50,6 +50,10 @@ body section h1 p {
   margin: 0 auto;
 }
 
+.bg {
+  background-image: url("../img/design-bg.jpg");
+}
+
 /* ------------------------------------------
   INTRO STYLES
 --------------------------------------------- */
@@ -75,7 +79,6 @@ body section h1 p {
 --------------------------------------------- */
 #about {
   height: 550px;
-  background-color: #ebcdb0;
 }
 
 #about i {
@@ -136,7 +139,6 @@ body section h1 p {
 --------------------------------------------- */
 #menu {
   height: 650px;
-  background-color: #ebcdb0;
 }
 
 @media only screen and (max-width: 660px) and (min-width: 200px) {
@@ -149,11 +151,9 @@ body section h1 p {
 --------------------------------------------- */
 #beans {
   height: 650px;
-  background-image: url(../img/coffee-beans1.png);
+  background-image: url(../img/coffee-beans1.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
 }
 #beans h1 {
   position: absolute;
@@ -165,6 +165,7 @@ body section h1 p {
 #contact {
   height: 700px;
   background-color: #ebcdb0;
+  background-image: url("../img/brown-bg.jpg");
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
 }
@@ -181,11 +182,10 @@ body section h1 p {
 .details h3 {
   font-size: 25px;
   padding-bottom: 10px;
-  padding-right: 30px;
 }
 .details p {
   font-size: 15px;
-  width: 400px;
+  width: 300px;
   text-align: left;
 }
 
@@ -216,6 +216,13 @@ body section h1 p {
     margin: auto;
     padding: 0px;
   }
+
+  #more {
+    padding-bottom: 20px;
+  }
+  #more p {
+    width: 200px;
+  }
 }
 /* ------------------------------------------
   MAP STYLES
@@ -227,8 +234,6 @@ body section h1 p {
   max-width: 1920px;
   position: relative;
   background-color: grey;
-  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
 }
 
 /* ------------------------------------------
