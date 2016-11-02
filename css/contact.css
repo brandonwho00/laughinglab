@@ -19,7 +19,7 @@ textarea {
 /* Form Styles */
 
 .container { 
-  width: 50%;
+  width: 40%;
  }
 .ajax-form { width: 100%; }
 .ajax-form input, 
@@ -39,20 +39,21 @@ textarea {
 
 .ajax-form input:focus, 
 .ajax-form textarea:focus {
-  	border: 3px solid #660000;
+  	border: 3px solid #20110c;
     color: #660000;
 }
 
 .ajax-form input[type="submit"] {
   background-color: rgba(255,255,255,.5);
     border: 3px solid #ccc;
-	color: rgba(0,153,204,.5);
+	color: rgba(55,48,52,.5);
 }
 
 .ajax-form input[type="submit"]:hover {
-  	background-color: rgba(0,153,204,.5);
-    border: 3px solid rgba(0,153,204,.5);
-    color: rgba(255,255,255,.5);
+  	background-color: rgba(142,87,87,.5);
+    border: 3px solid rgba(102,55,28,.5);
+    color: rgba(255,255,255,1);
+    cursor: pointer;
 }
 
 .name, .email { width: 48%; }

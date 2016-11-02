@@ -1,3 +1,29 @@
+.icon-sprite, .icon-icon-bakery, .icon-icon-coffee, .icon-icon-meet, .icon-icon-paw {
+  background-image: url('../img/icon-s8a502bab83.png');
+  background-repeat: no-repeat;
+}
+
+.icon-icon-bakery {
+  background-position: 0 0;
+}
+
+.icon-icon-coffee {
+  background-position: 0 -100px;
+}
+
+.icon-icon-meet {
+  background-position: 0 -200px;
+}
+
+.icon-icon-paw {
+  background-position: 0 -300px;
+}
+
+icon-meet, icon-paw, icon-coffee, icon-bakery {
+  background-image: url("../img/icon-s8a502bab83.png");
+  background-repeat: no-repeat;
+}
+
 /* ------------------------------------------
   HOME STYLES
 --------------------------------------------- */
@@ -10,14 +36,14 @@ body {
   font: normal 100%/1.4 sans-serif;
 }
 body section {
-  border-bottom: 1px solid #999;
   text-align: center;
   padding: 100px 0 0;
   height: 400px;
   width: 100%;
 }
 body section h1 {
-  margin-bottom: .5em;
+  font-size: 30px;
+  padding-bottom: 3em;
 }
 body section h1 p {
   width: 70%;
@@ -52,38 +78,72 @@ body section h1 p {
   background-color: #ebcdb0;
 }
 
-.fourcolumns {
-  width: 1200px;
-  padding-top: 75px;
-  margin: auto;
+#about i {
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+.about-style p {
+  text-align: left;
 }
 
 .about-style {
-  padding-bottom: 10px;
-  -webkit-column-count: 4;
-  /* Chrome, Safari, Opera */
-  -moz-column-count: 4;
-  /* Firefox */
-  column-count: 4;
-  -webkit-column-gap: 50px;
-  /* Chrome, Safari, Opera */
-  -moz-column-gap: 50px;
-  /* Firefox */
-  column-gap: 20px;
-  -webkit-column-rule: 1px solid #b17338;
-  /* Chrome, Safari, Opera */
-  -moz-column-rule: 1px solid #b17338;
-  /* Firefox */
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
 }
 
+.about-style section {
+  width: 60%;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 880px) and (min-width: 661px) {
+  #about {
+    height: 750px;
+  }
+
+  .about-style {
+    flex-direction: column;
+    height: 600px;
+  }
+
+  .about-style section {
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+  }
+}
+@media only screen and (max-width: 660px) and (min-width: 200px) {
+  #about {
+    height: 1250px;
+  }
+
+  .about-style {
+    flex-direction: column;
+    height: 900px;
+  }
+
+  .about-style section {
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+  }
+}
 /* ------------------------------------------
   MENU STYLES
 --------------------------------------------- */
 #menu {
-  height: 550px;
+  height: 650px;
   background-color: #ebcdb0;
 }
 
+@media only screen and (max-width: 660px) and (min-width: 200px) {
+  #menu {
+    height: 800px;
+  }
+}
 /* ------------------------------------------
   BEANS STYLES
 --------------------------------------------- */
@@ -103,47 +163,60 @@ body section h1 p {
   CONTACT STYLES
 --------------------------------------------- */
 #contact {
-  height: 600px;
+  height: 700px;
   background-color: #ebcdb0;
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
 }
 
 .twocolumns {
-  width: 1100px;
-  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
   margin: auto;
-}
-
-.left {
-  float: left;
-}
-
-.right {
-  float: right;
 }
 
 .details {
   width: 250px;
 }
 .details h3 {
-  font-size: 30px;
+  font-size: 25px;
   padding-bottom: 10px;
   padding-right: 30px;
 }
 .details p {
-  font-size: 20px;
-  width: 500px;
+  font-size: 15px;
+  width: 400px;
   text-align: left;
 }
 
+#more {
+  padding-top: 15px;
+}
 #more p {
   width: 400px;
-  line-height: 45px;
-  font-size: 25px;
+  line-height: 30px;
+  font-size: 18px;
   text-align: left;
 }
 
+@media only screen and (max-width: 770px) and (min-width: 300px) {
+  #contact {
+    height: 850px;
+  }
+
+  .twocolumns {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .twocolumns div {
+    width: 80%;
+    margin: auto;
+    padding: 0px;
+  }
+}
 /* ------------------------------------------
   MAP STYLES
 --------------------------------------------- */
