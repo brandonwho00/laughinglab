@@ -159,6 +159,16 @@ body section h1 p {
   position: absolute;
 }
 
+@media only screen and (max-width: 1000px) and (min-width: 500px) {
+  #beans {
+    background-image: url("../img/coffee-beans-1000px.jpg");
+  }
+}
+@media only screen and (max-width: 410px) and (min-width: 300px) {
+  #beans {
+    background-image: url("../img/coffee-beans-400px.jpg");
+  }
+}
 /* ------------------------------------------
   CONTACT STYLES
 --------------------------------------------- */
