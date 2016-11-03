@@ -23,6 +23,8 @@ a:hover {
 @viewport { width: device-width; }
 
 
+
+
 /* ------------------------------------------
   RESPONSIVE NAV STYLES
 --------------------------------------------- */
@@ -112,7 +114,7 @@ a:hover {
  }}
 
  @media (max-width:2800px) and (min-width:640px) {header nav a {
-  font-size: 20px;
+  font-size: 25px;
    -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -121,13 +123,21 @@ a:hover {
  }}
 
  @media (max-width:2800px) and (min-width:640px) { header.smaller {
- 	background-color: rgba(102,51,0,.8);
+ 	background-color: rgba(49,48,48,.8);
  	 -webkit-transition: all 0.6s;
     -moz-transition: all 0.6s;
     -ms-transition: all 0.6s;
     -o-transition: all 0.6s;
     transition: all 0.6s;
- }}
+ }
+  .logo {
+    color: #fff;
+   -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    transition: all 0.6s;
+    }}
 
 @media (max-width:2800px) and (min-width:640px) { header.smaller nav {
     height: 55px; }}
@@ -138,7 +148,9 @@ a:hover {
 	}}
 
  @media (max-width:2800px) and (min-width:640px) {   header.smaller nav a {
-    font-size: 18px;
+
+  color: #fff;
+    font-size: 20px;
       line-height: 1.42857143; }}
 
 
@@ -186,9 +198,10 @@ header {
   font-weight: bold;
   line-height: 55px;
   padding: 0 20px;
-  color: #fff;
+  color: #313030;
   float: left;
 }
+
 
 
 /* ------------------------------------------
@@ -277,7 +290,7 @@ header {
   text-decoration: none;
   background: transparent;
   padding: 0.7em 1em;
-  color: #fff;
+  color: #937457;
   width: 100%;
   float: left;
 }
@@ -289,7 +302,7 @@ header {
 
 @media screen and (min-width: 690px) {
   .nav-collapse a {
-    border-left: 1px solid white;
+    border-left: 1px solid rgba(146, 116, 87, .4);
     padding: 1.02em 2em;
     text-align: center;
     border-top: 0;
@@ -324,6 +337,22 @@ header {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "BREVE";
+    src: url("../fonts/BREVE2.ttf");
+}
+
+h1, a, h2, h3{
+  font-family: "BREVE";
+}
+
+p {
+  font-family: 'Poiret One', cursive;
+}
+
+h3 {
+  font-size: 30px;
+}
 
 .nav-toggle {
   -webkit-font-smoothing: antialiased;
@@ -338,7 +367,7 @@ header {
 }
 
 .nav-toggle:before {
-  color: #fff; /* Edit this to change the icon color */
+  color: #313030; /* Edit this to change the icon color */
   font: normal 28px/55px "responsivenav"; /* Edit font-size (28px) to change the icon size */
   text-transform: none;
   text-align: center;
